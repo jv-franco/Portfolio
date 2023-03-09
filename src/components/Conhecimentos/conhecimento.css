@@ -1,0 +1,85 @@
+.container-conhecimentos {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  border-top: 1px solid #e72424;
+}
+
+.hability-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.hability-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
+}
+
+.front > img {
+  width: 200px;
+  height: 200px;
+}
+
+.card-container {
+  width: 250px;
+  height: 300px;
+}
+
+.card-container:hover > .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1s;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  background-color: #2e1111;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1px solid #e72424;
+  backface-visibility: hidden;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #01203065;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-desc {
+  width: 200px;
+
+  color: #fff;
+}
+
+.back > h4 {
+  text-align: center;
+  color: #e72424;
+}

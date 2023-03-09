@@ -1,0 +1,46 @@
+.contact-section {
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  border-top: 1px solid #e72424;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.github,
+.linkedin,
+.email {
+  background-color: #1d0b0b;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border: 1px solid #e72424;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.github:hover,
+.linkedin:hover,
+.email:hover {
+  background-color: #b12a1883;
+  box-shadow: 0 0 10px #e72424, 0 0 20px #e72424, 0 0 60px #e72424;
+}
+
+.contact-icon {
+  width: 130px;
+}

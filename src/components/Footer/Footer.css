@@ -1,0 +1,22 @@
+footer {
+  height: 200px;
+  width: 100%;
+  border-top: 1px solid #e72424;
+  background-image: linear-gradient(#200c0c, #361010, #200c0c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+.link-footer {
+  text-decoration: none;
+  color: #e72424;
+  transition: 0.5s all;
+}
+
+.link-footer:hover {
+  color: #e72424;
+  text-shadow: 0 0 5px #e72424, 0 0 12px #e72424, 0 0 12px #e72424;
+}

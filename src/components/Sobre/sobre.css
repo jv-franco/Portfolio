@@ -1,0 +1,71 @@
+.container-sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sobre {
+  padding-top: 180px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  flex-direction: row;
+}
+
+.sobre-text {
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.sobre-text > p {
+  font-size: 1em;
+}
+
+.sobre-img > img {
+  width: 500px;
+}
+
+.toContact {
+  margin-top: 70px;
+  cursor: pointer;
+  padding: 15px 35px;
+
+  color: #fff;
+  border: none;
+  text-shadow: 1px 1px #790e0e;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 1px #000;
+  background: transparent;
+  background-repeat: repeat-x;
+  background-position: 0 -100%;
+  transition: 1.3s all;
+
+  background-image: url("../../images/nav-bg-fill-green.png");
+}
+
+.toContact:hover {
+  background-position: 500% 100%;
+  color: #000;
+  text-shadow: 1px 1px #3b3b3b;
+
+  box-shadow: 0 0 10px #aa1a1a, 0 0 20px #aa1a1a, 0 0 60px #aa1a1a;
+}
+
+@media only screen and (max-width: 1050px) {
+  .sobre {
+    flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .sobre-img > img {
+    padding: 0 20px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
