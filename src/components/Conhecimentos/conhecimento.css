@@ -57,7 +57,7 @@
   height: 100%;
 
   position: absolute;
-  background-color: #2e1111;
+  background-color: #01203065;
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.5px);
@@ -82,4 +82,11 @@
 .back > h4 {
   text-align: center;
   color: #e72424;
+}
+
+@media only screen and (max-width: 390px) {
+  .front,
+  .back {
+    width: 250px;
+  }
 }

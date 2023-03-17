@@ -3,6 +3,7 @@ import "./Contato.css";
 import GitHub from "../../images/github.svg";
 import Linkedin from "../../images/LinkedIn1.svg";
 import Email from "../../images/email.svg";
+import { RxGithubLogo, RxLinkedinLogo, RxEnvelopeClosed } from "react-icons/rx";
 const Contato = () => {
   return (
     <div className="contact-section">
@@ -13,17 +14,17 @@ const Contato = () => {
           href="https://github.com/jv-franco"
           target="_blank"
         >
-          <img className="contact-icon" src={GitHub} alt={GitHub}></img>
+          <RxGithubLogo />
         </a>
         <a
           href="https://www.linkedin.com/in/joãovitor-franco/"
           target="_blank"
           className="linkedin"
         >
-          <img className="contact-icon" src={Linkedin} alt={Linkedin}></img>
+          <RxLinkedinLogo />
         </a>
         <a className="email">
-          <img className="contact-icon" src={Email} alt={Email}></img>
+          <RxEnvelopeClosed />
         </a>
       </div>
     </div>

@@ -28,15 +28,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #ffffffc4;
   padding: 15px;
   cursor: pointer;
-  transition: 0.5s all;
+  transition: 0.8s all;
+  font-size: 130px;
 }
 
 .github:hover,
 .linkedin:hover,
 .email:hover {
+  transform: scale(1.05);
+  color: #fff;
   background-color: #b12a1883;
   box-shadow: 0 0 10px #e72424, 0 0 20px #e72424, 0 0 60px #e72424;
 }

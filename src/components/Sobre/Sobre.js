@@ -5,7 +5,7 @@ const Sobre = () => {
     <div className="container-sobre">
       <div className="sobre">
         <div className="sobre-text">
-          <h2>Olá, eu sou o João Vitor</h2>
+          <h2 className="sobre-title">Olá, eu sou o João Vitor</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
             imperdiet, lorem sed placerat rhoncus, neque nulla consequat massa,

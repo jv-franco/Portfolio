@@ -1,10 +1,22 @@
 import React, { useEffect, useState, Link } from "react";
+import { RxCross1 } from "react-icons/rx";
 import "./Projetos.css";
 
 import Data from "./ProjectData";
 
 const Projetos = (props) => {
+  const [selectItem, setSelectItem] = useState({});
   const [isHover, setIsHover] = useState(-1);
+  const [showDetails, setShowDetails] = useState(false);
+  function OpenDetails(item) {
+    setSelectItem(item);
+    setShowDetails(!showDetails);
+  }
+
+  function CloseDetails() {
+    setShowDetails(!showDetails);
+    selectItem({});
+  }
 
   return (
     <div className="project">
@@ -19,21 +31,110 @@ const Projetos = (props) => {
               onMouseLeave={() => setIsHover(-1)}
             >
               <h3 className="project-tittle">{item.name}</h3>
-              <div
-                className={
-                  isHover == index ? "project-btn show" : "project-btn hidden"
-                }
-              >
-                <a href={item.demo} target="_blank" className="btn-demo">
-                  Demo
-                </a>
-                <a href={item.code} target="_blank" className="btn-code">
-                  Code
-                </a>
-                <a href={item.more} target="_self" className="btn-more">
-                  Detalhes
-                </a>
-              </div>
+              {item.name == "Portfólio" ? (
+                <div
+                  className={
+                    isHover == index ? "project-btn show" : "project-btn hidden"
+                  }
+                >
+                  <a href={item.code} target="_blank" className="btn-code">
+                    Code
+                  </a>
+                  <a
+                    target="_self"
+                    className="btn-more"
+                    onClick={() => OpenDetails(item)}
+                  >
+                    Detalhes
+                  </a>
+                </div>
+              ) : (
+                <div
+                  className={
+                    isHover == index ? "project-btn show" : "project-btn hidden"
+                  }
+                >
+                  <a href={item.demo} target="_blank" className="btn-demo">
+                    Demo
+                  </a>
+                  <a href={item.code} target="_blank" className="btn-code">
+                    Code
+                  </a>
+                  <a
+                    target="_self"
+                    className="btn-more"
+                    onClick={() => OpenDetails(item)}
+                  >
+                    Detalhes
+                  </a>
+                </div>
+              )}
+
+              {showDetails && (
+                <div className="details-container">
+                  <div className="details">
+                    <RxCross1
+                      className="close-details-btn"
+                      onClick={CloseDetails}
+                    />
+                    <div className="details-demo">
+                      <div>
+                        {selectItem.video == "" ? (
+                          <div className="andamento">
+                            {" "}
+                            <h3 className="andamento-text">EM BREVE</h3>{" "}
+                          </div>
+                        ) : (
+                          <video
+                            className="details-video"
+                            width="440px"
+                            height="280px"
+                            src={selectItem?.video}
+                            controls
+                            autoPlay
+                            loop
+                            muted
+                          ></video>
+                        )}
+                      </div>
+                      {selectItem.name == "Portfólio" ? (
+                        <div className="details-demo-btn">
+                          <a
+                            href={selectItem?.code}
+                            target="_blank"
+                            className="details-btn-code"
+                          >
+                            Code
+                          </a>
+                        </div>
+                      ) : (
+                        <div className="details-demo-btn">
+                          <a
+                            href={selectItem?.demo}
+                            target="_blank"
+                            className="details-btn-demo"
+                          >
+                            Demo
+                          </a>
+                          <a
+                            href={selectItem?.code}
+                            target="_blank"
+                            className="details-btn-code"
+                          >
+                            Code
+                          </a>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="details-desc">
+                      <h4 className="details-title">{selectItem?.name}</h4>{" "}
+                      <p className="details-p">{selectItem?.desc}</p>
+                      <h5 className="details-data">06/02/2023</h5>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}

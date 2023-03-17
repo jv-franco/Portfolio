@@ -16,12 +16,7 @@
 }
 
 body {
-  background: rgb(120, 13, 13);
-  background: radial-gradient(
-    circle,
-    rgba(120, 13, 13, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: #0f0101;
 }
 
 .section-title {

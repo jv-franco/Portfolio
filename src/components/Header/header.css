@@ -14,9 +14,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  position: relative;
   position: fixed;
-  background: #080202;
+  background: #000d13;
 
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -24,7 +24,7 @@ header {
   border-bottom: 1px solid #e72424;
 }
 
-h3 {
+header > h3 {
   text-transform: uppercase;
   margin-left: 1rem;
   font-size: 25px;

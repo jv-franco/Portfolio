@@ -2,7 +2,7 @@ footer {
   height: 200px;
   width: 100%;
   border-top: 1px solid #e72424;
-  background-image: linear-gradient(#200c0c, #361010, #200c0c);
+  background-color: #00080c;
   color: #fff;
   display: flex;
   align-items: center;
