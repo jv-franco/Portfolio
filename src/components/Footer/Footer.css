@@ -1,22 +1,24 @@
 footer {
-  height: 200px;
+  height: 80px;
   width: 100%;
   border-top: 1px solid #e72424;
   background-color: #00080c;
-  color: #fff;
+  color: #ffffffb4;
+  text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin-top: 7rem;
+  word-wrap: break-word;
 }
 
 .link-footer {
+  text-align: justify;
   text-decoration: none;
-  color: #e72424;
+  color: #ffffffb4;
   transition: 0.5s all;
 }
 
 .link-footer:hover {
-  color: #e72424;
-  text-shadow: 0 0 5px #e72424, 0 0 12px #e72424, 0 0 12px #e72424;
+  color: #fff;
 }

@@ -19,7 +19,7 @@ const Projetos = (props) => {
   }
 
   return (
-    <div className="project">
+    <div className="project" id="projetos">
       <h2 className="section-title">Meus Projetos</h2>
       <div className="container-project">
         {Data.map((item, index) => (
@@ -31,7 +31,7 @@ const Projetos = (props) => {
               onMouseLeave={() => setIsHover(-1)}
             >
               <h3 className="project-tittle">{item.name}</h3>
-              {item.name == "Portfólio" ? (
+              {item.demo == "" ? (
                 <div
                   className={
                     isHover == index ? "project-btn show" : "project-btn hidden"
@@ -130,7 +130,9 @@ const Projetos = (props) => {
                     <div className="details-desc">
                       <h4 className="details-title">{selectItem?.name}</h4>{" "}
                       <p className="details-p">{selectItem?.desc}</p>
-                      <h5 className="details-data">06/02/2023</h5>
+                      <h5 className="details-data">
+                        {selectItem?.detailsData}
+                      </h5>
                     </div>
                   </div>
                 </div>
