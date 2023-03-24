@@ -1,8 +1,8 @@
 import barbeariaImg from "../../images/barbearia.png";
 import agcar from "../../images/AgCar.png";
-import barbeariaVideo from "../../videos/barbearia.mkv";
+import barbeariaVideo from "../../videos/barbearia.mp4";
 import portfolio from "../../images/portfolio.png";
-import portfoliooVideo from "../../videos/portfolio.mkv";
+import portfoliooVideo from "../../videos/portfolio.mp4";
 
 const Data = [
   {

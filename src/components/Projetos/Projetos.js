@@ -1,10 +1,11 @@
-import React, { useEffect, useState, Link } from "react";
+import React, { useState, useRef } from "react";
 import { RxCross1 } from "react-icons/rx";
 import "./Projetos.css";
 
 import Data from "./ProjectData";
 
 const Projetos = (props) => {
+  const windowSize = useRef([window.innerWidth]);
   const [selectItem, setSelectItem] = useState({});
   const [isHover, setIsHover] = useState(-1);
   const [showDetails, setShowDetails] = useState(false);
@@ -14,8 +15,11 @@ const Projetos = (props) => {
   }
 
   function CloseDetails() {
+    setSelectItem({});
     setShowDetails(!showDetails);
-    selectItem({});
+  }
+
+  if (windowSize < 1200) {
   }
 
   return (
@@ -31,42 +35,65 @@ const Projetos = (props) => {
               onMouseLeave={() => setIsHover(-1)}
             >
               <h3 className="project-tittle">{item.name}</h3>
-              {item.demo == "" ? (
+              {item.demo === "" ? (
                 <div
                   className={
-                    isHover == index ? "project-btn show" : "project-btn hidden"
+                    windowSize.current[0] < 1200
+                      ? "project-btn show"
+                      : isHover === index
+                      ? "project-btn show"
+                      : "project-btn hidden"
                   }
                 >
-                  <a href={item.code} target="_blank" className="btn-code">
+                  <a
+                    href={item.code}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-code project-btns"
+                  >
                     Code
                   </a>
-                  <a
+                  <button
                     target="_self"
-                    className="btn-more"
+                    className="btn-more project-btns"
                     onClick={() => OpenDetails(item)}
                   >
                     Detalhes
-                  </a>
+                  </button>
                 </div>
               ) : (
                 <div
                   className={
-                    isHover == index ? "project-btn show" : "project-btn hidden"
+                    windowSize.current[0] < 1200
+                      ? "project-btn show"
+                      : isHover === index
+                      ? "project-btn show"
+                      : "project-btn hidden"
                   }
                 >
-                  <a href={item.demo} target="_blank" className="btn-demo">
+                  <a
+                    href={item.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-demo project-btns"
+                  >
                     Demo
                   </a>
-                  <a href={item.code} target="_blank" className="btn-code">
+                  <a
+                    href={item.code}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-code project-btns"
+                  >
                     Code
                   </a>
-                  <a
+                  <button
                     target="_self"
-                    className="btn-more"
+                    className="btn-more project-btns"
                     onClick={() => OpenDetails(item)}
                   >
                     Detalhes
-                  </a>
+                  </button>
                 </div>
               )}
 
@@ -75,14 +102,13 @@ const Projetos = (props) => {
                   <div className="details">
                     <RxCross1
                       className="close-details-btn"
-                      onClick={CloseDetails}
+                      onClick={() => CloseDetails()}
                     />
                     <div className="details-demo">
                       <div>
-                        {selectItem.video == "" ? (
+                        {selectItem.video === "" ? (
                           <div className="andamento">
-                            {" "}
-                            <h3 className="andamento-text">EM BREVE</h3>{" "}
+                            <h3 className="andamento-text">EM BREVE</h3>
                           </div>
                         ) : (
                           <video
@@ -97,11 +123,12 @@ const Projetos = (props) => {
                           ></video>
                         )}
                       </div>
-                      {selectItem.name == "Portfólio" ? (
+                      {selectItem.demo === "" ? (
                         <div className="details-demo-btn">
                           <a
                             href={selectItem?.code}
                             target="_blank"
+                            rel="noreferrer"
                             className="details-btn-code"
                           >
                             Code
@@ -112,6 +139,7 @@ const Projetos = (props) => {
                           <a
                             href={selectItem?.demo}
                             target="_blank"
+                            rel="noreferrer"
                             className="details-btn-demo"
                           >
                             Demo
@@ -119,6 +147,7 @@ const Projetos = (props) => {
                           <a
                             href={selectItem?.code}
                             target="_blank"
+                            rel="noreferrer"
                             className="details-btn-code"
                           >
                             Code

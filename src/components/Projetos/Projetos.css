@@ -23,7 +23,7 @@
   object-fit: fill;
   border: 3px solid #012030;
   border-radius: 10px;
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -40,7 +40,7 @@
   opacity: 1;
 }
 
-.project-btn > a {
+.project-btns {
   display: inline-block;
   cursor: pointer;
   padding: 10px;
@@ -49,9 +49,14 @@
   border-radius: 6px;
   text-decoration: none;
   transition: 0.5s all;
+  font-size: 16px;
 }
 
-.project-btn > a:hover {
+.project-btns > button {
+  border: none;
+}
+
+.project-btns:hover {
   background-color: #053b53f6;
 }
 
