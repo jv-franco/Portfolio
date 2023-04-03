@@ -22,11 +22,12 @@
   justify-content: space-around;
   align-items: center;
   gap: 60px;
+  max-width: 1300px;
 }
 
 .front > img {
-  width: 200px;
-  height: 200px;
+  width: 130px;
+  height: 130px;
 }
 
 .card-container {
@@ -82,6 +83,10 @@
 .back > h4 {
   text-align: center;
   color: #e72424;
+}
+
+#hability_7 {
+  filter: invert(100%);
 }
 
 @media only screen and (max-width: 390px) {

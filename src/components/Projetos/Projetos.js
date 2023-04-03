@@ -105,7 +105,7 @@ const Projetos = (props) => {
                       onClick={() => CloseDetails()}
                     />
                     <div className="details-demo">
-                      <div>
+                      <div className="video">
                         {selectItem.video === "" ? (
                           <div className="andamento">
                             <h3 className="andamento-text">EM BREVE</h3>

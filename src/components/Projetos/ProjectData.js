@@ -3,6 +3,8 @@ import agcar from "../../images/AgCar.png";
 import barbeariaVideo from "../../videos/barbearia.mp4";
 import portfolio from "../../images/portfolio.png";
 import portfoliooVideo from "../../videos/portfolio.mp4";
+import pokenext from "../../images/pokenext.png";
+import pokenextvideo from "../../videos/pokenext.mp4";
 
 const Data = [
   {
@@ -34,6 +36,16 @@ const Data = [
     code: "https://github.com/jv-franco/agcar",
     video: "",
     detailsData: "02/02/2023",
+  },
+  {
+    name: "PokeNext",
+    img: pokenext,
+    id: 4,
+    desc: "Criei uma Pokedex com o framework NextJs, que permite aos usuários buscar e visualizar informações sobre diferentes pokemons. Adicionei uma barra de pesquisa na interface do usuário, permitindo que o usuário busque um pokemon digitando seu nome. Para exibir imagens dos pokemons, usei uma API que retorna URLs de imagens de alta qualidade. Em vez de usar CSS Modules, optei por usar o framework Tailwind para estilizar o aplicativo, tornando o processo mais rápido e fácil. No geral, a Pokedex é uma ferramenta útil para os fãs de Pokemon, com uma interface fácil de usar e estilo agradável.",
+    demo: "https://pokenext-production-c276.up.railway.app",
+    code: "https://github.com/jv-franco/pokenext",
+    video: pokenextvideo,
+    detailsData: "01/04/2023",
   },
 ];
 

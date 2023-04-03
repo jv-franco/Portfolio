@@ -15,7 +15,11 @@ const Conhecimentos = () => {
           >
             <div className="card">
               <div className="front">
-                <img src={item.img}></img>
+                <img
+                  id={`hability_${item.id}`}
+                  alt={item.name}
+                  src={item.img}
+                ></img>
               </div>
               <div className="back">
                 <h4>{item.name}</h4>

@@ -12,8 +12,9 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
+  max-width: 1300px;
 }
 
 .project-img {
@@ -26,7 +27,7 @@
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
-
+  margin: 0 67px;
   overflow: hidden;
   transition: border 0.5s;
   transition: 0.5s all;
@@ -232,7 +233,7 @@
 
 .details-data {
   margin-top: 15px;
-  color: #5d0707;
+  color: #ffffff;
 }
 
 .andamento {
@@ -261,6 +262,13 @@
   }
 }
 
+@media only screen and (max-heigth: 650px) {
+  .details {
+    height: 80dvh;
+    overflow-y: scroll;
+  }
+}
+
 @media only screen and (max-width: 980px) {
   .details {
     align-items: center;
@@ -268,6 +276,10 @@
     height: 100dvh;
 
     width: 88vw;
+  }
+
+  .project-img {
+    margin: 0;
   }
 
   .details-desc {
@@ -303,12 +315,5 @@
   .project-tittle {
     font-size: 1.3em;
     text-align: center;
-  }
-}
-
-@media only screen and (max-heigth: 550px) {
-  .details {
-    height: 80dvh;
-    overflow-y: scroll;
   }
 }

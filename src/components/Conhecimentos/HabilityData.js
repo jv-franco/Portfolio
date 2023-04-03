@@ -3,6 +3,8 @@ import CSS from "../../images/css.svg";
 import ReactLogo from "../../images/React-icon.svg";
 import JS from "../../images/javascript.svg";
 import GitIcon from "../../images/Git_icon.svg";
+import Next from "../../images/Nextjs.svg";
+import Tailwind from "../../images/Tailwind.svg";
 
 const HabilityData = [
   {
@@ -34,6 +36,18 @@ const HabilityData = [
     img: GitIcon,
     desc: "Git é um sistema de controle de versão de código fonte, usado para gerenciar o código de projetos e facilitar a colaboração de múltiplos desenvolvedores.",
     id: 5,
+  },
+  {
+    name: "TAILWIND",
+    img: Tailwind,
+    desc: "Tailwind é um framework CSS popular que simplifica a estilização da interface do usuário com classes pré-definidas, economizando tempo e recursos no desenvolvimento de aplicativos web.",
+    id: 6,
+  },
+  {
+    name: "NEXTJS",
+    img: Next,
+    desc: "Next.js é um framework JavaScript popular para aplicativos web React, que permite aplicativos escaláveis e de alto desempenho, sendo uma opção popular para projetos complexos.",
+    id: 7,
   },
 ];
 
