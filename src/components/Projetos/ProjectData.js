@@ -5,6 +5,8 @@ import portfolio from "../../images/portfolio.png";
 import portfoliooVideo from "../../videos/portfolio.mp4";
 import pokenext from "../../images/pokenext.png";
 import pokenextvideo from "../../videos/pokenext.mp4";
+import footbr from "../../images/footbr.png";
+import footbrvideo from "../../videos/footbrvideo.mp4";
 
 const Data = [
   {
@@ -42,10 +44,20 @@ const Data = [
     img: pokenext,
     id: 4,
     desc: "Criei uma Pokedex com o framework NextJs, que permite aos usuários buscar e visualizar informações sobre diferentes pokemons. Adicionei uma barra de pesquisa na interface do usuário, permitindo que o usuário busque um pokemon digitando seu nome. Para exibir imagens dos pokemons, usei uma API que retorna URLs de imagens de alta qualidade. Em vez de usar CSS Modules, optei por usar o framework Tailwind para estilizar o aplicativo, tornando o processo mais rápido e fácil. No geral, a Pokedex é uma ferramenta útil para os fãs de Pokemon, com uma interface fácil de usar e estilo agradável.",
-    demo: "https://pokenext-production-c276.up.railway.app",
+    demo: "https://jv-franco.github.io/pokenext/",
     code: "https://github.com/jv-franco/pokenext",
     video: pokenextvideo,
     detailsData: "01/04/2023",
+  },
+  {
+    name: "FootBR",
+    img: footbr,
+    id: 5,
+    desc: "Para desenvolver o site, escolhi utilizar as tecnologias NextJS e Tailwind CSS, que me permitiram criar um site com visual elegante e moderno. Para realizar as requisições à API-futebol, utilizei a biblioteca Axios, que facilitou muito o processo de obtenção e exibição dos dados. O projeto permite que o usuário visualize os resultados e classificações dos dois campeonatos mais importantes do país, o Campeonato Brasileiro e a Copa do Brasil. Além disso, a aplicação exibe apenas a rodada atual do Campeonato Brasileiro, o que torna a experiência do usuário mais dinâmica e atualizada.",
+    demo: "https://foot-br.vercel.app",
+    code: "https://github.com/jv-franco/FootBR",
+    video: footbrvideo,
+    detailsData: "19/04/2023",
   },
 ];
 
