@@ -86,7 +86,7 @@ const Header = () => {
             Sobre mim
           </Link>
           <Link
-            to="sobre"
+            to="projetos"
             spy={true}
             smooth={true}
             offset={-70}
@@ -97,7 +97,7 @@ const Header = () => {
             Projetos
           </Link>
           <Link
-            to="sobre"
+            to="conhecimentos"
             spy={true}
             smooth={true}
             offset={-70}
@@ -108,7 +108,7 @@ const Header = () => {
             Conhecimentos
           </Link>
           <Link
-            to="sobre"
+            to="contato"
             spy={true}
             smooth={true}
             duration={500}

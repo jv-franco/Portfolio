@@ -31,6 +31,7 @@ const Projetos = (props) => {
             <div
               style={{ backgroundImage: `url(${item.img})` }}
               className="project-img"
+              id={item.id}
               onMouseEnter={() => setIsHover(index)}
               onMouseLeave={() => setIsHover(-1)}
             >
